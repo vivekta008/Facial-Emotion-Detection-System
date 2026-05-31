@@ -88,7 +88,7 @@ jobs:
          
       - name: Stop and remove  container if running
         run: |
-         docker ps -q --filter "name=sign" | grep -q . && docker stop sign && docker rm -fv sign
+         docker ps -q --filter "name=sign" | grep -q . && docker stop sign && docker rm -fv sign || True
        
       - name: Run Docker Image to serve users
         run: |
