@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Facial Emotion Detection System</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Facial Emotion Detection System</h1>
+
+    <section class="card">
+      <h2>Image Upload Detection</h2>
+      <form id="upload-form">
+        <input type="file" id="image-input" accept="image/*" required />
+        <button type="submit">Detect</button>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Webcam Detection</h2>
+      <video id="video" autoplay playsinline width="640" height="480"></video>
+      <div class="buttons">
+        <button id="capture-btn" type="button">Capture</button>
+        <button id="detect-cam-btn" type="button" disabled>Detect Captured Frame</button>
+      </div>
+      <canvas id="canvas" width="640" height="480" style="display: none;"></canvas>
+    </section>
+
+    <section class="card">
+      <h2>Result</h2>
+      <div id="info"></div>
+      <img id="output-image" alt="Detection result" class="result-image" />
+    </section>
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
